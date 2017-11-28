@@ -1,0 +1,31 @@
+<div class="content">
+  <input ng-model="search" placeholder="Search Reminder">
+  <table class="w3-table w3-striped">
+    <th>ID</th>
+    <th>Date</th>
+    <th>Subject</th>
+    <th>User</th>
+    <th>description</th>
+    <th>email</th>
+    <th>Mobile</th>
+    <th>recur</th>
+    <th>status</th>
+    <th>Select</th>
+    <tr ng-repeat="x in rem | filter : search">
+      <td>{{x._id}}</td>
+      <td>{{ x.date }}</td>
+      <td>{{ x.subject }}</td>
+      <td>{{ x.user.name }}</td>
+      <td>{{ x.description }}</td>
+      <td>{{ x.email }}</td>
+      <td>{{ x.mobile }}</td>
+      <td>{{ x.recur }}</td>
+      <td>{{ x.status }}</td>
+      <td><input type="checkbox" ng-model="checkbox" ng-change="select(checkbox,x._id,x.status)"></td>
+    </tr>
+  </table>
+{{message}}
+
+<button ng-click="delete()">DELETE</button>
+<button ng-click="update()">Disable / Active</button>
+</div>

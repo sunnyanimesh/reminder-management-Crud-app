@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+      <link rel='stylesheet' href='/stylesheets/style.css' />
+
+  </head>
+  <body>
+
+      <div class="main">
+      <br><br>
+          <div id="login">
+            <form class="w3-container"  method="get" action="/login">
+              <p><input class="w3-input" name="username" type="text" placeholder="Username"></p>
+              <p><input class="w3-input" name="password" type="password" placeholder="Password"></p>
+              <center><input type="submit" value="Log in" class="w3-button w3-black"></center>
+            </form>
+            <br><br>
+          </div>
+          <center><p><%=message%></p></center>
+        
+
+      </div>
+    </body>
+</html>

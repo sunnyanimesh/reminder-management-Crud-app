@@ -1,0 +1,19 @@
+<div class="content">
+  <form ng-submit="updateReminder()">
+    <input type="text" ng-model="Rid" ng-change="find(Rid)" placeholder="reminder id">
+{{count}}
+    <select ng-model="subject">
+      <option value="Math">Math</option>
+      <option value="Science">Science</option>
+      <option value="SST">SST</option>
+      <option value="English">English</option>
+      <option value="Computer">Computer</option>
+    </select>
+
+    <input type="text" ng-model="description" placeholder="description">
+    <input type="text" ng-model="email" placeholder="email">
+    <input type="text" ng-model="mobile" placeholder="mobile">
+    <input type="submit" value="submit">
+  </form>
+
+</div>

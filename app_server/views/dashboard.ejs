@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title><%=name%></title>
+    <script type="text/javascript" src="/javascripts/angular.min.js"> </script>
+    <script type="text/javascript" src="/javascripts/angular.route.min.js"></script>
+    <link rel="stylesheet" href="/stylesheets/stylemain.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  </head>
+
+  <body  ng-app="myApp" ng-init = "id ='<%=_id%>'">
+    <div class="content">
+
+      <div id="menu-bar">
+        <h1>Reminder management</h1>
+      <ul>
+        <li><a href="#!/set">Set Reminder</a></li>
+        <li><a href="#!/modify">Modify</a></li>
+        <li><a href="#!/disable">Disable</a></li>
+        <li><a href="#!/delete">Delete</a></li>
+        <li><a href="#!/allReminders">ALL Reminders</a></li>
+
+        <li ><a href="/logout" class="w3-text-black">logout</a></li>
+      </ul>
+
+      </div>
+
+      <h1>  Hello <%=name %> </h1>
+      </div>
+&nbsp 
+<br>
+<span id="c"></span>
+<span id="e"></span>
+<span id="d"></span>
+<main ng-view>
+</main>
+<script type="text/javascript" src="/javascripts/app.js">
+
+</script>
+  </body>
+  <script type="text/javascript">
+    window.onload = function what(){
+      var c = (new Date()).getDay();
+      var weekday = new Array(7);
+weekday[0] =  "Sunday";
+weekday[1] = "Monday";
+weekday[2] = "Tuesday";
+weekday[3] = "Wednesday";
+weekday[4] = "Thursday";
+weekday[5] = "Friday";
+weekday[6] = "Saturday";
+  document.getElementById('c').innerHTML = "today is " + weekday[c]+ "," ;
+  var d = new Date();
+  var e = d.getDate();
+  document.getElementById('e').innerHTML = e +"of";
+
+  var d = new Date();
+  var month = new Array();
+  month[0] = "January";
+  month[1] = "February";
+  month[2] = "March";
+  month[3] = "April";
+  month[4] = "May";
+  month[5] = "June";
+  month[6] = "July";
+  month[7] = "August";
+  month[8] = "September";
+  month[9] = "October";
+  month[10] = "November";
+  month[11] = "December";
+  var n = month[d.getMonth()];
+  document.getElementById('d').innerHTML = n ;
+
+  };
+  </script>
+</html>
